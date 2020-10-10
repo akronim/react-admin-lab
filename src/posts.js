@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useMediaQuery } from '@material-ui/core';
+import { useMediaQuery } from "@material-ui/core";
 import {
   List,
   Datagrid,
@@ -15,10 +15,6 @@ import {
   Filter,
   SimpleList,
 } from "react-admin";
-
-const PostTitle = ({ record }) => {
-  return <span>Post {record ? `"${record.title}"` : ""}</span>;
-};
 
 export const PostList = (props) => {
   const isSmall = useMediaQuery((theme) => theme.breakpoints.down("sm"));
@@ -45,6 +41,10 @@ export const PostList = (props) => {
       )}
     </List>
   );
+};
+
+const PostTitle = ({ record }) => {
+  return <span>Post {record ? `"${record.title}"` : ""}</span>;
 };
 
 export const PostEdit = (props) => (
